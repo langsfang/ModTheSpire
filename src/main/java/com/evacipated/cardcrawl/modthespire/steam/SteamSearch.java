@@ -135,7 +135,8 @@ public class SteamSearch
 
     private static Path steamToSTSPath(Path path)
     {
-        return Paths.get(path.toString(), "common", "SlayTheSpire");
+        // MacOS weird path
+        return Paths.get(path.toString(), "common", "SlayTheSpire", "SlayTheSpire.app", "Contents", "Resources");
     }
 
     private static boolean containsAcfFile(Path path)
